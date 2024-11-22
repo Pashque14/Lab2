@@ -1,20 +1,39 @@
-﻿// ЛАБА2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
 
-#include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+// Функция для чтения данных из файла
+void readDataFromFile(const string& fileName, vector<string>& lines) {
+
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+// Функция для записи данных в файл
+void writeDataToFile(const vector<string>& lines, const string& destFileName) {
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+}
+
+// Функция для вывода вектора на экран
+void displayVector(const vector<string>& lines) {
+
+}
+
+int main() {
+    const string sourceFileName = "in.txt";
+    const string destFileName = "out.txt";
+    vector<string> lines;
+
+    // Чтение данных из файла
+    readDataFromFile(sourceFileName, lines);
+
+    // Вывод вектора на экран
+    displayVector(lines);
+
+    // Запись данных в файл
+    writeDataToFile(lines, destFileName);
+
+    return 0;
+}
+

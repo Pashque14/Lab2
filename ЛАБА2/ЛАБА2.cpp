@@ -27,7 +27,9 @@ void writeDataToFile(const vector<string>& lines, const string& destFileName) {
 
 // Функция для вывода вектора на экран
 void displayVector(const vector<string>& lines) {
-
+	for (const auto& line : lines) {
+		cout << line << endl;
+	}
 }
 
 int main() {

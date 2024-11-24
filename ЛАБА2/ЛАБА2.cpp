@@ -22,12 +22,24 @@ void readDataFromFile(const string& fileName, vector<string>& lines) {
 
 // Функция для записи данных в файл
 void writeDataToFile(const vector<string>& lines, const string& destFileName) {
+    ofstream outputFile(destFileName, ios::app);
 
+    if (outputFile.is_open()) {
+        for (const auto& line : lines) {
+            outputFile << line << endl;
+        }
+        outputFile.close();
+    }
+    else {
+        cerr << "Error opening file." << endl;
+    }
 }
 
 // Функция для вывода вектора на экран
 void displayVector(const vector<string>& lines) {
-
+	for (const auto& line : lines) {
+		cout << line << endl;
+	}
 }
 
 int main() {

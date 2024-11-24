@@ -7,7 +7,17 @@ using namespace std;
 
 // Функция для чтения данных из файла
 void readDataFromFile(const string& fileName, vector<string>& lines) {
-
+    ifstream inputFile(fileName);
+    if (inputFile.is_open()) {
+        string line;
+        while (getline(inputFile, line)) {
+            lines.push_back(line);
+        }
+        inputFile.close();
+    }
+    else {
+        cerr << "Error opening file." << endl;
+    }
 }
 
 // Функция для записи данных в файл
